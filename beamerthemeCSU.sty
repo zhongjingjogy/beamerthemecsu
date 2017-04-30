@@ -1,0 +1,70 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{beamerthemeCSU}
+  [2011/01/11 v0.01 LaTeX package for my own purpose]
+
+\definecolor{darkcerulean}{rgb}{0.03, 0.27, 0.49}
+\definecolor{darkelectricblue}{rgb}{0.33, 0.41, 0.47}
+
+% custom the title page
+% https://tex.stackexchange.com/questions/110925/how-to-customize-title-page-in-beamer-so-that-it-looks-like
+\defbeamertemplate*{title page}{customized}[1][]
+{
+    %font setting for the title
+    \usebeamerfont{subtitle}
+    \usebeamercolor[fg]{subtitle}
+    \setbeamercolor{postit}{fg=darkcerulean,bg=white}
+    % set the theme of the presentation
+    \begin{beamercolorbox}[sep=1em,wd=1.062\textwidth,ht=2.0cm,dp=2cm]{postit}
+    {
+        \begin{tabular}{cl}
+        \multirow{3}{*}{\includegraphics[width=2cm]{dimat.jpg}} & \textbf{DIMAT 2017} \\
+        & {\small International Conference on Diffusion in Diffusion in Materials} \\
+        & Haifa, Israel
+        \end{tabular}
+    }
+    % format the title of the title page
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[sep=1em,wd=1.062\textwidth,ht=0.2cm,dp=1cm,center]{postit}
+    {
+    \usebeamerfont{title} {\large \inserttitle}
+    }
+    % \par \usebeamerfont{subtitle} {\insertsubtitle}
+    \end{beamercolorbox}
+    % format the information of the authors
+    \begin{beamercolorbox}[sep=1em,wd=1.062\textwidth,ht=0.5cm,dp=0.5cm,center]{postit}
+    {
+    \setbeamercolor{author}{bg=black,fg=Red}
+    \usebeamerfont{author} \insertauthor\par
+    \usebeamerfont{institute}\insertinstitute\par 
+    }
+    \end{beamercolorbox}
+    %format the logo for the institute
+    \begin{beamercolorbox}[sep=1em,wd=1.062\textwidth,ht=2.0cm,dp=0.1cm,right]{postit}
+    { 
+    \includegraphics[width=4cm]{logo.jpg}
+    }
+    \end{beamercolorbox}
+}
+
+% frametitle
+\setbeamertemplate{frametitle}
+{
+    \setbeamercolor{palette quaternary}{fg=white,bg=darkelectricblue}
+    \setbeamercolor{titlelike}{parent=palette quaternary}
+    \nointerlineskip
+    \begin{beamercolorbox}[sep=0.3cm,ht=2.0em,wd=\paperwidth]{frametitle}
+        \vbox{}\vskip-4ex%
+        \strut\insertframetitle\strut
+        \hfill
+        \raisebox{-3.0mm}{\includegraphics[width=0.8cm]{csu.png}}
+        \vskip-0.8ex%
+    \end{beamercolorbox}
+}
+% turn of the navigation bar
+\usecolortheme[named=YellowOrange]{structure}
+% important: the frametitle would deviate from the top margin
+% if the infolines is activated.
+% \useoutertheme{infolines}
+\setbeamertemplate{navigation symbols}{}
+
+\endinput
