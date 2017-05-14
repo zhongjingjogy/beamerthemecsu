@@ -88,14 +88,14 @@ sty样式文件的编写和使用
 
 3. 图表标题
 ``````````````
-::
+:: 
     \setbeamertemplate{caption}{
         \tiny \raggedright \insertcaptionname\ \insertcaptionnumber. \insertcaption\par
     }
 
 4. block样式
 `````````````````
-::
+:: 
     \setbeamercolor{block}{bg=red, fg=white}
     \setbeamercolor{block title}{bg=white, fg=arsenic}
     \setbeamerfont{block title}{size=\footnotesize}
@@ -103,7 +103,7 @@ sty样式文件的编写和使用
 
 5. 字体及颜色
 ```````````````
-::
+:: 
     \setbeamerfont{normal text}{size=\scriptsize}
     \setbeamercolor{normal text}{fg=black}
     \setbeamertemplate{footline}{}
