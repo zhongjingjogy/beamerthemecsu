@@ -71,6 +71,7 @@ sty样式文件的编写和使用
 
 2. 幻灯片标题
 ````````````````
+幻灯片标题定制
 :: 
     \setbeamertemplate{frametitle}
     {
@@ -88,6 +89,7 @@ sty样式文件的编写和使用
 
 3. 图表标题
 ``````````````
+图标标题定制
 :: 
     \setbeamertemplate{caption}{
         \tiny \raggedright \insertcaptionname\ \insertcaptionnumber. \insertcaption\par
@@ -95,6 +97,7 @@ sty样式文件的编写和使用
 
 4. block样式
 `````````````````
+block样式定制
 :: 
     \setbeamercolor{block}{bg=red, fg=white}
     \setbeamercolor{block title}{bg=white, fg=arsenic}
