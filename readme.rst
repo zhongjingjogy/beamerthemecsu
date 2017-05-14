@@ -5,14 +5,12 @@ sty样式文件的编写和使用
 ------------------------
 
 在进行格式定制前，先简单了解一下sty样式文件的编写和使用。新建文件名为beamerthemeCSU.sty的文件，然后在其中声明这个样式文件的名称。此处，sty样式定义的名称为beamerthemeCSU。
-
-::
-    \\NeedsTeXFormat{LaTeX2e}[1994/06/01]
-    \\ProvidesPackage{beamerthemeCSU}
-    [2017/05/9 v0.01 LaTeX package for my own purpose]
+:: 
+    \\NeedsTeXFormat{LaTeX2e}[1994/06/01] 
+    \\ProvidesPackage{beamerthemeCSU} 
+    [2017/05/9 v0.01 LaTeX package for my own purpose] 
 
 暂时不添加别的内容，然后在当前路径下新建一个幻灯片源文件template.tex。
-
 ::
     \\documentclass[xcolor=dvipsnames]{beamer}
     \\usepackage{beamerthemeCSU}
