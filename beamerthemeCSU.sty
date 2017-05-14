@@ -2,9 +2,12 @@
 \ProvidesPackage{beamerthemeCSU}
   [2011/01/11 v0.01 LaTeX package for my own purpose]
 
+\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
 \definecolor{darkcerulean}{rgb}{0.03, 0.27, 0.49}
 \definecolor{darkelectricblue}{rgb}{0.33, 0.41, 0.47}
-
+\definecolor{arsenic}{rgb}{0.23, 0.27, 0.29}
+\definecolor{internationalkleinblue}{rgb}{0.0, 0.18, 0.65}
+\definecolor{indigodye}{rgb}{0.0, 0.25, 0.42}
 % custom the title page
 % https://tex.stackexchange.com/questions/110925/how-to-customize-title-page-in-beamer-so-that-it-looks-like
 \defbeamertemplate*{title page}{customized}[1][]
@@ -49,22 +52,31 @@
 % frametitle
 \setbeamertemplate{frametitle}
 {
-    \setbeamercolor{palette quaternary}{fg=white,bg=darkelectricblue}
+    \setbeamercolor{palette quaternary}{fg=white,bg=arsenic}
     \setbeamercolor{titlelike}{parent=palette quaternary}
     \nointerlineskip
     \begin{beamercolorbox}[sep=0.3cm,ht=2.0em,wd=\paperwidth]{frametitle}
         \vbox{}\vskip-4ex%
         \strut\insertframetitle\strut
-        \hfill
-        \raisebox{-3.0mm}{\includegraphics[width=0.8cm]{csu.png}}
+        % \hfill
+        % \raisebox{-2.0mm}{\includegraphics[width=0.7cm]{csu.png}}
         \vskip-0.8ex%
     \end{beamercolorbox}
 }
+
 % turn of the navigation bar
-\usecolortheme[named=YellowOrange]{structure}
+\usecolortheme[named=internationalkleinblue]{structure}
 % important: the frametitle would deviate from the top margin
 % if the infolines is activated.
 % \useoutertheme{infolines}
 \setbeamertemplate{navigation symbols}{}
-
+% important: get rid of the footline
+\setbeamertemplate{footline}{}
+\setbeamertemplate{caption}{
+    \tiny \raggedright \insertcaptionname\ \insertcaptionnumber. \insertcaption\par
+}
+\setbeamerfont{normal text}{size=\scriptsize}
+\setbeamercolor{normal text}{fg=black}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{enumerate items}[square]
 \endinput
