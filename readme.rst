@@ -35,20 +35,22 @@ sty样式文件的编写和使用
 
 - 标题页
 - 幻灯片标题
-- 图标标题
+- 图表标题
 - block样式
 - 字体及颜色
 
 在beamer环境中，提供了\defbeamertemplate和\setbeamertemplate两个命令帮助我们制作新的样式。前者可认为是重新声明新的样式，而后者这是能够对默认样式进行修改。
 
 1. 标题页
+```````````````
+修改sty文件，添加标题页的样式到sty文件中。重新编译可预览样式效果。
 :: 
     \defbeamertemplate*{title page}{customized}[1][]
     {
         %font setting for the title
         \usebeamerfont{subtitle}
         \usebeamercolor[fg]{subtitle}
-        \setbeamercolor{postit}{fg=darkcerulean,bg=white}
+        \setbeamercolor{postit}{fg=black,bg=white}
 
         \begin{beamercolorbox}[sep=1em,wd=1.062\textwidth,ht=0.2cm,dp=1cm,center]{postit}
         {
@@ -65,5 +67,44 @@ sty样式文件的编写和使用
             \usebeamerfont{institute}\insertinstitute\par 
         }
         \end{beamercolorbox}
-}
+    }
 
+2. 幻灯片标题
+````````````````
+:: 
+    \setbeamertemplate{frametitle}
+    {
+        \setbeamercolor{palette quaternary}{fg=white,bg=arsenic}
+        \setbeamercolor{titlelike}{parent=palette quaternary}
+        \nointerlineskip
+        \begin{beamercolorbox}[sep=0.3cm,ht=2.0em,wd=\paperwidth]{frametitle}
+            \vbox{}\vskip-4ex%
+            \strut\insertframetitle\strut
+            % \hfill
+            % \raisebox{-2.0mm}{\includegraphics[width=0.7cm]{csu.png}}
+            \vskip-0.8ex%
+        \end{beamercolorbox}
+    }
+
+3. 图表标题
+``````````````
+::
+    \setbeamertemplate{caption}{
+        \tiny \raggedright \insertcaptionname\ \insertcaptionnumber. \insertcaption\par
+    }
+
+4. block样式
+`````````````````
+::
+    \setbeamercolor{block}{bg=red, fg=white}
+    \setbeamercolor{block title}{bg=white, fg=arsenic}
+    \setbeamerfont{block title}{size=\footnotesize}
+    \setbeamerfont{block body}{size=\tiny}
+
+5. 字体及颜色
+```````````````
+::
+    \setbeamerfont{normal text}{size=\scriptsize}
+    \setbeamercolor{normal text}{fg=black}
+    \setbeamertemplate{footline}{}
+    \setbeamertemplate{enumerate items}[square]
