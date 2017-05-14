@@ -104,10 +104,15 @@ block样式定制
     \setbeamerfont{block title}{size=\footnotesize}
     \setbeamerfont{block body}{size=\tiny}
 
-5. 字体及颜色
-```````````````
+5. 字体和颜色
+`````````````````
+可以设置全文的字体大小和颜色。
 :: 
     \setbeamerfont{normal text}{size=\scriptsize}
     \setbeamercolor{normal text}{fg=black}
     \setbeamertemplate{footline}{}
     \setbeamertemplate{enumerate items}[square]
+
+字体及颜色
+------------
+字体与颜色在这里单独的总结。首先是颜色可以根据rgb编码来自行定制，常用的配色表可以参考'Latex颜色表<http://latexcolor.com/>'。
