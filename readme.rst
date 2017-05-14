@@ -115,4 +115,10 @@ block样式定制
 
 字体及颜色
 ------------
-字体与颜色在这里单独的总结。首先是颜色可以根据rgb编码来自行定制，常用的配色表可以参考'Latex颜色表<http://latexcolor.com/>'。
+字体与颜色在这里单独的总结。首先是颜色可以根据rgb编码来自行定制，常用的配色表可以参考'Latex颜色表<http://latexcolor.com/>'_。
+:: 
+    \definecolor{satinsheengold}{rgb}{0.8, 0.63, 0.21}
+
+定义过以后，就能在文中使用。可以在设置全局环境中使用，也能通过\\textcolor来使用。
+:: 
+    \textcolor{red}{\textbf{(1) Smoothing: which fitting function to be chosen?}}
